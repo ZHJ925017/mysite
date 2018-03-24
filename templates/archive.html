@@ -2,13 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>blog</title>
 </head>
 <body>
+<h1>Blog says........</h1>
+<div>
+    hey there partner!<br/>
+    <strong>{{boldmessage}}</strong><br/>
+</div>
+<div>
+    <a href="/blog/about/">About</a><br/>
+</div>
+<div>
 {% for post in posts %}
 <h2>{{post.title}}</h2>
 <p>{{post.timestamp}}</p>
 <p>{{post.body}}</p>
 {% endfor %}
+</div>
 </body>
 </html>
