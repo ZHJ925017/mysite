@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load staticfiles %}<!--New line-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blog</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static "css/base.css" %}" />
+    <!-- JavaScript -->
+    <script src="{% static "js/jquery.js" %}"></script>
+</head>
+<body>
+<h1>Blog says........</h1>
+
+<div>
+    hey there partner!
+</div>
+
+<div>
+{% if categories %}
+<ul>
+  {% for category in categories %}
+     <li><a href="/blog/category/{{category.slug}}">{{ category.name }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+    <strong>There are no categories present.</strong>
+{% endif %}
+</div>
+
+<div>
+    <a href="/blog/about/">About    Blog</a><br/>
+    <!-- Image -->
+    <img src="{%static "images/blog.jpg"%}"
+         alt="Picture of Blog"/><!--New line-->
+</div>
+</body>
+</html>

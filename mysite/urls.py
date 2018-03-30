@@ -24,7 +24,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^$',views.archive,name='archive'),
     url(r'^about',views.about,name='about'),
-    url(r'^blog',views.index,name='index'),
+    url(r'^index',views.index,name='index'),
+    url(r'^category/(?P<category_name_slug>[\w\-]+)/$',views.show_category,name='show_category'),
     url(r'^blog/', include('blog.urls')),
     url(r'^admin/',admin.site.urls),
    ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

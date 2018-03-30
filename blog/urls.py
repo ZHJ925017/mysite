@@ -20,5 +20,6 @@ from blog import views
 
 urlpatterns=[
     url(r'^$',views.archive,name='archive'),
+    url(r'^category/(?P<category_name_slug>[\w\-]+)/$',views.show_category,name='show_category'),
 
 ]
